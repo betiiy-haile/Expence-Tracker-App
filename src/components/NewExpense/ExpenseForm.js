@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import "./ExpenseForm.css"
 import { prettyDOM } from '@testing-library/react';
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
 
     const [enteredTitle, setEnteredTitle] = useState('')
     const [enteredAmount, setEnteredAmount] = useState("");
@@ -54,7 +54,7 @@ const ExpenseForm = () => {
             date: new Date(enteredDate)
         }
 
-        console.log(expense)
+        props.onSaveExpenseDate(expense);
         setEnteredTitle("")
         setEnteredAmount("");
         setEnteredDate("");
