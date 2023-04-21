@@ -5,7 +5,6 @@ import "./ExpenseList.css"
 
 function ExpenseList(props) {
 
-    let expenseContent = <p>No Expenses Found.</p>;
     if (props.items.length === 0){
         return <h2 className='expenses-list__fallback'>No Expenses Found</h2>
     } 
